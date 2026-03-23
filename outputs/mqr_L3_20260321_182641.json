@@ -1,0 +1,257 @@
+{
+  "pipeline_version": "v2.0_fixed_mapping_causal_weights",
+  "created_at": "20260321_182641",
+  "market_text": "市场：AI 原生法律研究工具（美国中型律所）\n背景：2025 年，Harvey AI 和 Casetext 开始向拥有 50-200 名律师的律所销售 AI 法律研究工具。参考年：2025",
+  "step1_result": {
+    "timing": {
+      "classification": "early_chasm",
+      "confidence": "medium",
+      "rationale": "Harvey AI 和 Casetext 开始向律所销售，表明市场处于早期采用者阶段。"
+    },
+    "competition": {
+      "classification": "nascent",
+      "confidence": "medium",
+      "rationale": "市场描述中提到的公司数量有限，表明市场仍处于初期阶段。"
+    },
+    "market_size": {
+      "classification": "small",
+      "confidence": "low",
+      "rationale": "市场描述未提供具体收入数据，但作为新兴市场，可能在 $100M-$1B 范围内。"
+    },
+    "customer_readiness": {
+      "classification": "adopting",
+      "confidence": "medium",
+      "rationale": "Harvey AI 和 Casetext 已开始销售，表明已有客户在购买和使用。"
+    },
+    "regulatory": {
+      "classification": "moderate",
+      "confidence": "medium",
+      "rationale": "法律行业通常有明确的合规要求，但未提到严格监管。"
+    },
+    "infrastructure": {
+      "classification": "developing",
+      "confidence": "medium",
+      "rationale": "AI 技术在法律领域的应用正在发展中，成本曲线下降。"
+    },
+    "market_structure": {
+      "classification": "emerging",
+      "confidence": "medium",
+      "rationale": "市场描述中提到的公司数量有限，表明价值链尚在形成。"
+    },
+    "market_structure_type": {
+      "classification": "technology_enablement",
+      "confidence": "high",
+      "rationale": "AI 技术的应用创造了新的市场机会。"
+    }
+  },
+  "step2_result": {
+    "timing": {
+      "role1_classification": "early_chasm",
+      "gemini_classification": "early_majority",
+      "agreement": "MEDIUM",
+      "confidence": "high",
+      "evidence": "In 2025, a Thomson Reuters survey found 26% of legal organizations actively using generative AI, and a November 2025 report indicated that 39% of US law firms with 51 or more lawyers were using legal-specific generative AI tools, aligning with the 8-35% adoption rate characteristic of the early majority stage.",
+      "key_fact": "In 2025, 39% of US law firms with 51 or more lawyers reported using legal-specific generative AI tools."
+    },
+    "competition": {
+      "role1_classification": "nascent",
+      "gemini_classification": "consolidating",
+      "agreement": "LOW",
+      "confidence": "medium",
+      "evidence": "在2025年，法律科技领域的融资额飙升至32亿至59.9亿美元之间，其中很大一部分流向了支持AI的公司。市场出现了显著的并购活动，包括Clio在2025年末以10亿美元收购vLex，以及汤森路透此前对Casetext的收购，这表明大型参与者正在整合AI能力并收购创新型初创公司。",
+      "key_fact": "2025年法律科技融资总额高达59.9亿美元，并伴随着Clio以10亿美元收购vLex等重大并购事件，显示出市场正在积极整合。"
+    },
+    "market_size": {
+      "role1_classification": "small",
+      "gemini_classification": "small",
+      "agreement": "HIGH",
+      "confidence": "medium",
+      "evidence": "Harvey AI，一家主要的AI原生法律研究工具提供商，在2025年底的年经常性收入（ARR）估计达到1.9亿至1.95亿美元。此外，2025年全球AI法律服务市场规模估计在15亿美元到45.9亿美元之间，其中法律研究和案例分析是重要组成部分。美国中型律所（50-250名律师）对AI工具的采用率在2025年大幅增长，其中66%的律所使用AI驱动的法律研究工具。",
+      "key_fact": "Harvey AI在2025年底的年经常性收入（ARR）估计为1.9亿至1.95亿美元。"
+    },
+    "customer_readiness": {
+      "role1_classification": "adopting",
+      "gemini_classification": "adopting",
+      "agreement": "HIGH",
+      "confidence": "high",
+      "evidence": "在2025年，86%的中型律所报告称正在使用AI，这表明该技术已超越实验阶段，成为现代法律实践的运营基础，许多律所还制定了正式的AI使用政策。例如，截至2025年10月，Harvey AI拥有超过400家中型律所客户，并积极通过深度集成策略瞄准这一市场。",
+      "key_fact": "2025年，86%的中型律所报告称正在使用AI。"
+    },
+    "regulatory": {
+      "role1_classification": "moderate",
+      "gemini_classification": "moderate",
+      "agreement": "HIGH",
+      "confidence": "high",
+      "evidence": "The regulatory environment for AI-native legal research tools in the US in 2025 is characterized by a patchwork of ethical guidelines and opinions from the American Bar Association and numerous state bar associations, emphasizing lawyer competence, confidentiality, supervision, and candor to the court, with the Federal Trade Commission also addressing consumer protection concerns related to AI.",
+      "key_fact": "The American Bar Association and various state bar associations have issued ethical guidelines and opinions, such as ABA Formal Opinion 512 (2024), emphasizing that existing professional conduct rules apply to lawyers' use of AI, requiring competence, confidentiality, supervision, and verification of AI-generated work."
+    },
+    "infrastructure": {
+      "role1_classification": "developing",
+      "gemini_classification": "developing",
+      "agreement": "HIGH",
+      "confidence": "high",
+      "evidence": "在2025年，生成式AI被认为是法律行业的核心基础设施，Harvey AI等平台正在深入整合到现有法律工作流程中，并利用云基础设施（例如，Microsoft Azure占据了79%的云服务器部署）。 然而，在数据准备和无缝集成方面仍存在挑战，这阻碍了更广泛的采用。",
+      "key_fact": "2025年，生成式AI成为法律行业的核心基础设施，并积极整合到现有法律工作流程和云平台中。"
+    },
+    "market_structure": {
+      "role1_classification": "emerging",
+      "gemini_classification": "forming",
+      "agreement": "MEDIUM",
+      "confidence": "high",
+      "evidence": "在2025年，Gartner确定了生成式AI在法律部门的六大主要用例，并将AI列为总法律顾问的紧急战略优先事项。法律AI协会（A4L）成立，旨在联合律师事务所和技术领导者，推动负责任的AI创新，并特别关注中小型律师事务所采用AI技术所面临的挑战。此外，像“AI+法律认证”这样的认证项目也已推出，旨在帮助法律专业人士将AI工具整合到法律研究中。Harvey AI和Casetext（现为CoCounsel）等主要参与者在2025年积极面向中型律师事务所提供AI原生法律研究工具。",
+      "key_fact": "2025年全球法律AI市场价值约为21亿美元，其中法律研究是一个重要的应用领域，拥有51名以上律师的律所生成式AI采用率为39%。"
+    },
+    "market_structure_type": {
+      "role1_classification": "technology_enablement",
+      "gemini_classification": "technology_enablement",
+      "agreement": "HIGH",
+      "confidence": "high",
+      "evidence": "AI原生法律研究工具市场在2025年由人工智能这一新技术驱动，创造了新的能力和市场细分，吸引了众多新老参与者，并正在经历快速增长和转型，这与技术赋能型市场的定义高度吻合。",
+      "key_fact": ""
+    },
+    "_summary": {
+      "overall_agreement": "MEDIUM",
+      "high": 4,
+      "medium": 2,
+      "low": 1,
+      "total": 7
+    }
+  },
+  "scoring": {
+    "dimension_scores": {
+      "timing": {
+        "role1_classification": "early_chasm",
+        "gemini_classification": "early_majority",
+        "final_classification": "early_majority",
+        "raw_score": 75,
+        "agreement": "MEDIUM",
+        "confidence_multiplier": 0.88,
+        "adjusted_score": 66.0,
+        "source": "averaged"
+      },
+      "competition": {
+        "role1_classification": "nascent",
+        "gemini_classification": "consolidating",
+        "final_classification": "nascent",
+        "raw_score": 85,
+        "agreement": "LOW",
+        "confidence_multiplier": 0.648,
+        "adjusted_score": 55.1,
+        "source": "conservative_conflict"
+      },
+      "market_size": {
+        "role1_classification": "small",
+        "gemini_classification": "small",
+        "final_classification": "small",
+        "raw_score": 45,
+        "agreement": "HIGH",
+        "confidence_multiplier": 1.0,
+        "adjusted_score": 45.0,
+        "source": "gemini"
+      },
+      "customer_readiness": {
+        "role1_classification": "adopting",
+        "gemini_classification": "adopting",
+        "final_classification": "adopting",
+        "raw_score": 85,
+        "agreement": "HIGH",
+        "confidence_multiplier": 1.0,
+        "adjusted_score": 85.0,
+        "source": "gemini"
+      },
+      "regulatory": {
+        "role1_classification": "moderate",
+        "gemini_classification": "moderate",
+        "final_classification": "moderate",
+        "raw_score": 55,
+        "agreement": "HIGH",
+        "confidence_multiplier": 1.0,
+        "adjusted_score": 55.0,
+        "source": "gemini"
+      },
+      "infrastructure": {
+        "role1_classification": "developing",
+        "gemini_classification": "developing",
+        "final_classification": "developing",
+        "raw_score": 55,
+        "agreement": "HIGH",
+        "confidence_multiplier": 1.0,
+        "adjusted_score": 55.0,
+        "source": "gemini"
+      },
+      "market_structure": {
+        "role1_classification": "emerging",
+        "gemini_classification": "forming",
+        "final_classification": "forming",
+        "raw_score": 60,
+        "agreement": "MEDIUM",
+        "confidence_multiplier": 0.88,
+        "adjusted_score": 52.8,
+        "source": "averaged"
+      },
+      "market_structure_type": "technology_enablement"
+    },
+    "composite": {
+      "composite_score": 60.18,
+      "market_structure_type": "technology_enablement",
+      "weights_applied": {
+        "timing": 0.6,
+        "competition": 0.18,
+        "market_size": 0.22
+      },
+      "dimension_contributions": {
+        "timing": {
+          "weight": 0.42,
+          "adjusted_score": 66.0,
+          "contribution": 27.72
+        },
+        "competition": {
+          "weight": 0.126,
+          "adjusted_score": 55.1,
+          "contribution": 6.94
+        },
+        "market_size": {
+          "weight": 0.154,
+          "adjusted_score": 45.0,
+          "contribution": 6.93
+        },
+        "customer_readiness": {
+          "weight": 0.075,
+          "adjusted_score": 85.0,
+          "contribution": 6.38
+        },
+        "regulatory": {
+          "weight": 0.075,
+          "adjusted_score": 55.0,
+          "contribution": 4.12
+        },
+        "infrastructure": {
+          "weight": 0.075,
+          "adjusted_score": 55.0,
+          "contribution": 4.12
+        },
+        "market_structure": {
+          "weight": 0.075,
+          "adjusted_score": 52.8,
+          "contribution": 3.96
+        }
+      },
+      "primary_contribution": 41.59,
+      "residual_contribution": 18.59
+    },
+    "rating": {
+      "rating": "L3",
+      "label": "FAVORABLE",
+      "probability": "约 10-11/20 的同类市场实现了规模化",
+      "outlook": "→ Stable"
+    },
+    "analyst_flags": [
+      {
+        "priority": "HIGH",
+        "dimension": "competition",
+        "issue": "Role 1 (nascent) 与 Gemini (consolidating) 分类严重分歧",
+        "action": "需要人工核实 competition 的正确分类"
+      }
+    ]
+  }
+}
