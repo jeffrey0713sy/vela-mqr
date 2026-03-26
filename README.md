@@ -135,37 +135,37 @@ Every rating carries:
 
 ## Experimental Results
 
-### Reference Population
-
-| Metric | Value |
-|--------|-------|
-| Total markets generated | 107 |
-| Reference year range | 2005–2019 |
-| Pipeline failures | 0 |
-| Rating distribution (v2.0) | L4: 15 · L3: 42 · L2: 32 · L1: 18 · L5: 0 |
-
-### Predictive Performance (N=107 with T+5 outcome labels)
+### Latest Frozen Run (N=500, split seed=20260324)
 
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
-| **AUC** | **0.8486** | Strong discrimination (0.5=random · 0.7=signal · 0.8+=publishable) |
-| ECE (before temperature scaling) | 0.3641 | Raw calibration error |
-| ECE (after temperature scaling) | 0.3615 | Post-scaling calibration |
-| **Naive ECE (all-positive baseline)** | **~0.14** | ECE of a model that always predicts scale=True |
-| **ECE vs naive baseline** | **+0.22** | Pipeline ECE exceeds naive baseline — see calibration note |
-| Optimal temperature T | 3.0 | Conservative scaling applied |
+| Total rated markets | 500 | Current full reference population |
+| Train / Validation / External test | 350 / 75 / 75 | Reproducible frozen split |
+| Overall positive rate (`achieved_scale=True`) | 69.0% (345/500) | Imbalanced outcome distribution |
+| **External AUC (full pipeline)** | **0.7244** | Meaningful ranking signal vs random |
+| External AUC (random baseline) | 0.4709 | Near-random as expected |
+| ECE before / after temperature scaling | 0.2995 / 0.2481 | Calibration improves after scaling |
+| Top-decile `k` (external) | 8 | Top 10% of 75 test markets |
+| **Top-decile hit rate (full)** | **1.0000** | 8/8 top-ranked markets are positive |
+| External positive rate | 0.7200 | Base success rate on external test |
+| **Top-decile lift (full)** | **1.3889x** | Primary KPI for alpha concentration |
+| Top-decile lift (random baseline) | 1.0417x | Close to chance-level ranking |
+| L5 precision/recall | 0 / 0 | No L5 predictions with current thresholds |
 
-> **Calibration note (v2.1):** With 86% positive labels, a model that predicts "will scale"
-> for every market achieves ECE ≈ 0.14. The pipeline's ECE of 0.3641 is higher — meaning
-> the absolute probability values (e.g., "P(scale) = 0.7") should **not** be reported
-> externally. The AUC of 0.8486 (a ranking metric, unaffected by label imbalance in the same
-> way) remains a valid measure of discriminative power. See Limitations §1.
+> **Result framing note (v2.1):** For the current 500-market setup, `top-decile lift` is the
+> primary portfolio-selection KPI. L5=0 is currently a threshold/score-range mismatch, not a
+> pipeline crash or missing output.
+
+### Historical Baseline Snapshot (N=107, early run)
+
+The earlier 107-market numbers are kept for traceability only. They are superseded by the
+500-market frozen-split evaluation above.
 
 ---
 
-## Ablation Studies (N=107)
+## Ablation Studies (Historical N=107)
 
-Five ablation conditions evaluated against the full pipeline baseline (AUC=0.8486).
+These ablation results come from the early 107-market run and are retained as historical diagnostics.
 
 | Condition | AUC | ΔAUC | Interpretation |
 |-----------|-----|------|----------------|
@@ -229,9 +229,9 @@ for reliable percentile calibration.
 
 ## Limitations and Future Work
 
-1. **Label imbalance (critical).** The current reference population has 86% positive labels
-   (achieved_scale=True). This inflates in-sample AUC and causes ECE to exceed the naive
-   all-positive baseline (ECE_pipeline ≈ 0.36 > ECE_naive ≈ 0.14). Absolute probability
+1. **Label imbalance (critical).** The current 500-market population has 69% positive labels
+   (achieved_scale=True). This can still inflate in-sample discrimination and bias calibration.
+   Absolute probability
    values must not be reported externally until this is resolved.
    *Future work:* manually curate negative cases; use `NEGATIVE_CASE_SEEDS` in `pipeline_step0.py`
    to target known failed markets (e.g., Google Glass consumer, Quibi) during generation.
@@ -242,11 +242,9 @@ for reliable percentile calibration.
    > *"Outcome labels are LLM-generated and require future validation against real T+5
    > portfolio data."* — Vela MQR Project Brief, §8.1
 
-3. **Role 3 population coverage.** The 107-market reference population was generated before
-   Role 3 was integrated (`used_role3=False` in all archived scoring blocks). Ablation 5
-   (Role 3 delta analysis) therefore has no data.
-   *Future work:* run `patch_role3.py` to back-fill Role 3 scores for all 107 markets
-   (~$2–3 API cost, ~30 minutes).
+3. **Role 3 historical coverage gap.** The original 107-market archive predates full Role 3
+   integration (`used_role3=False` in archived blocks). This affects historical ablation
+   comparability, but not the latest 500-market reporting workflow.
 
 4. **Competition dimension mapping.** The decision to move competition to RESIDUAL is driven
    by empirical AUC on an imbalanced population and may not reflect the true causal structure.
@@ -261,7 +259,7 @@ for reliable percentile calibration.
 ## Setup
 
 ```bash
-pip install openai google-genai python-dotenv
+pip install openai google-genai python-dotenv matplotlib
 ```
 
 Create `.env` in the project root:
@@ -280,8 +278,8 @@ python recompute_scores.py
 # Evaluate a single market
 python main.py
 
-# Generate reference population (120 markets)
-python run_scale_pipeline.py --target 120
+# Generate reference population (500 markets) + auto post-report
+python run_scale_pipeline.py --target 500 --auto-report
 
 # Run ablation studies
 python run_ablation.py
