@@ -76,6 +76,21 @@ Establish reproducible and decision-useful evidence that the pipeline can rank h
 - [x] Add paper-ready table and figure references directly tied to run IDs.
 - [ ] Plan external validation against independently verified market outcomes.
 
+## Idea Forecasting track (Crunchbase / Vela Summer 2025)
+
+Parallel to the MQR simulation eval: historical **US ideas 2010–2017**, label `is_outlier` (≈\$250M outcome proxy). **Train** = founded year ≤ 2015, **test** = 2016–2017. Do not use `total_funding_usd` as an input feature (leakage).
+
+| Piece | Path / command |
+|--------|----------------|
+| Optional deps | `pip install -r requirements-idea.txt` |
+| Import xlsx → csv | `python scripts/import_idea_training.py --input path/to/idea_training.xlsx` |
+| Eval (lexicon / TF-IDF+LR / LLM slice) | `python idea_forecast_eval.py --scorer lexicon` |
+| Full chain | `python run_idea_pipeline.py --input path/to/idea_training.xlsx` |
+| Vela Search enrichment | `python scripts/idea_enrich_vela.py --input ... --output ...` (needs `VELA_SEARCH_*` env) |
+| Smoke fixture | `python idea_forecast_eval.py --csv fixtures/idea_forecast_smoke.csv --scorer lexicon --min-train-rows 5 --min-test-rows 5` |
+
+Artifacts: `outputs/idea_forecast/metrics.json`, `summary.md`. CSV under `data/idea_training/` is gitignored; use your local xlsx.
+
 ## Reporting Rules (Keep)
 
 - Do not mix train/validation/external metrics into one headline number.

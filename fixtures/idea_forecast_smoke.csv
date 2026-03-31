@@ -1,0 +1,26 @@
+uuid,founded_on,name,status,short_description,long_description,category_groups_list,category_list,state_code,city,cb_url,total_funding_usd,is_big_acquired,is_large_funding,is_ipo,is_mid_outlier,is_outlier
+s01,2014-06-01,AlphaCo,operating,B2B analytics platform for retail,Long text about analytics retail software.,Software,Software,CA,SF,https://example.com/a,500000,0,0,0,0,0
+s02,2015-03-15,BetaBio,operating,Gene therapy for rare disease,Long text biotech rare disease pipeline.,Biotech,Biotech,MA,BOS,https://example.com/b,1200000,0,0,0,0,0
+s03,2013-01-10,GammaPay,operating,Payments API for marketplaces,Long text payments infrastructure.,Fintech,Fintech,NY,NYC,https://example.com/c,800000,0,0,0,0,1
+s04,2015-11-20,DeltaDrone,closed,Consumer drone photography,Long text drones consumer.,Hardware,Hardware,TX,AUS,https://example.com/d,300000,0,0,0,0,0
+s05,2012-08-08,EpsilonEd,operating,Online courses for engineers,Long text edtech courses.,Edtech,Edtech,WA,SEA,https://example.com/e,2000000,0,0,0,0,0
+s06,2014-02-28,ZetaShop,operating,DTC skincare brand,Long text ecommerce skincare.,Commerce,Commerce,CA,LA,https://example.com/f,900000,0,0,0,0,0
+s07,2015-07-07,EtaHealth,operating,Telehealth for diabetes,Long text telehealth diabetes.,Health,Health,IL,CHI,https://example.com/g,1500000,0,0,0,0,0
+s08,2013-12-12,ThetaSec,operating,Cloud security posture management,Long text cybersecurity CSPM.,Security,Security,VA,DC,https://example.com/h,2500000,0,0,0,0,0
+s09,2014-09-09,IotaFood,operating,Plant based meat alternatives,Long text food tech plant.,Food,Food,OR,PDX,https://example.com/i,700000,0,0,0,0,0
+s10,2015-04-04,KappaAI,operating,LLM tools for legal teams,Long text legal AI assistant.,AI,AI,NY,NYC,https://example.com/j,1100000,0,0,0,0,0
+s11,2012-05-05,LambdaLog,operating,Observability for kubernetes,Long text devops kubernetes.,Software,Software,CA,SF,https://example.com/k,1800000,0,0,0,0,0
+s12,2015-08-18,MuSolar,operating,Residential solar financing,Long text solar financing.,Energy,Energy,AZ,PHX,https://example.com/l,600000,0,0,0,0,0
+s13,2013-03-03,NuGames,closed,Mobile puzzle games,Long text mobile games.,Gaming,Gaming,FL,MIA,https://example.com/m,400000,0,0,0,0,0
+s14,2014-10-10,XiRobo,operating,Warehouse robotics automation,Long text warehouse robots.,Robotics,Robotics,OH,CLE,https://example.com/n,3500000,0,0,0,1,1
+s15,2015-01-25,OmicronHR,operating,HRIS for mid market,Long text HR software.,HR,HR,TX,DAL,https://example.com/o,950000,0,0,0,0,0
+s16,2016-02-02,PiOutlierA,operating,Enterprise data warehouse,Long text massive scale DWH.,Data,Data,CA,SF,https://example.com/p,50000000,0,1,0,1,1
+s17,2016-06-06,RhoOutlierB,acquired,AI chip design,Long text semiconductors AI.,Hardware,Hardware,CA,SJ,https://example.com/q,300000000,1,0,0,1,1
+s18,2016-09-09,SigmaSmall,operating,Niche pet grooming app,Long text pet app small.,Apps,Apps,NV,LV,https://example.com/r,200000,0,0,0,0,0
+s19,2017-01-01,TauMid,operating,Vertical saas for dentists,Long text dental saas.,Software,Software,CO,DEN,https://example.com/s,60000000,0,1,0,1,0
+s20,2017-04-04,UpsilonAI,operating,Computer vision for manufacturing,Long text CV manufacturing.,AI,AI,MI,DET,https://example.com/t,800000,0,0,0,0,0
+s21,2016-12-12,PhiBio,operating,CRISPR tools,Long text crispr tools.,Biotech,Biotech,CA,SD,https://example.com/u,1200000,0,0,0,0,0
+s22,2017-07-07,ChiFin,operating,Neobank for teens,Long text fintech teens.,Fintech,Fintech,GA,ATL,https://example.com/v,500000,0,0,0,0,0
+s23,2016-03-03,PsiCloud,operating,Multi cloud cost optimization,Long text cloud cost.,Cloud,Cloud,WA,SEA,https://example.com/w,4500000,0,0,0,0,0
+s24,2017-10-10,OmegaMed,ipo,Digital therapeutics platform,Long text digital therapeutics.,Health,Health,MA,BOS,https://example.com/x,280000000,0,0,1,1,1
+s25,2016-08-08,AlphaRepeat,operating,Repeat from train pattern analytics,Long text.,Software,Software,CA,SF,https://example.com/y,700000,0,0,0,0,0

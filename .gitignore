@@ -1,4 +1,4 @@
-# Python
+﻿# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -14,3 +14,11 @@ outputs/figures_latest_20260325_191827/
 
 # Env secrets
 .env
+
+# Crunchbase-derived idea training export (generate locally)
+data/idea_training/*.csv`r`ndata/idea_training/manifest.json
+
+# Idea eval outputs (regenerate with idea_forecast_eval.py)
+outputs/idea_forecast/metrics.json
+outputs/idea_forecast/summary.md
+
