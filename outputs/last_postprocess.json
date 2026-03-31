@@ -1,0 +1,16 @@
+{
+  "timestamp": "20260331_120841",
+  "split_seed": 20260325,
+  "run_ids": {
+    "full": "auto_full_500_20260331_120841",
+    "random": "auto_random_500_20260331_120841",
+    "naive": "auto_naive_500_20260331_120841"
+  },
+  "figures_dir": "outputs/figures_latest_20260331_120841",
+  "threshold": 60.0,
+  "bootstrap_B": 1000,
+  "bootstrap_seed": 20260331,
+  "paper_run_ids": [
+    "my_run"
+  ]
+}

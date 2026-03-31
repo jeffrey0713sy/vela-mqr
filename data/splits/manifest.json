@@ -1,0 +1,17 @@
+{
+  "split_version": "v1",
+  "seed": 20260325,
+  "ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "external_test": 0.15
+  },
+  "source": "data\\reference_population_master.json",
+  "include_unrated": false,
+  "counts": {
+    "total": 500,
+    "train": 350,
+    "validation": 75,
+    "external_test": 75
+  }
+}

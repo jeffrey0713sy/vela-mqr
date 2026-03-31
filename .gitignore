@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Large figure archives (keep latest batch only)
+outputs/figures_390/
+outputs/figures_mine/
+outputs/figures_latest_20260325_191827/
+
+# Env secrets
+.env
